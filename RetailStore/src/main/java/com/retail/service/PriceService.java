@@ -51,10 +51,10 @@ public class PriceService {
 		HttpHeaders requestHeaders=new HttpHeaders();
 	    requestHeaders.setContentType(MediaType.APPLICATION_JSON);
 	    HttpEntity<Price> entity = new HttpEntity<Price>(price ,requestHeaders);
-		
+
 		ResponseEntity<String> result = new RestTemplate().exchange(updateURL, HttpMethod.PUT, entity, String.class);
 		if(result.getStatusCode().is2xxSuccessful()){
-			return result; 
+			return result;
 		}
 		Logger.getAnonymousLogger().log(Level.INFO, "Entering PriceService, updatePriceDetail()");
 		return new ResponseEntity<>(RetailConstant.SERVICE_DOWN,HttpStatus.EXPECTATION_FAILED);
