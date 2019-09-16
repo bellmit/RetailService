@@ -12,6 +12,9 @@ public class Price {
 	@JsonProperty("currency_code")
 	private String currencyCode;
 
+	public Price() {
+
+	}
 	public Price(BigDecimal value, String currencyCode) {
 		this.value = value;
 		this.currencyCode = currencyCode;

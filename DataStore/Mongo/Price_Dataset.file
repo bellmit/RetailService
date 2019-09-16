@@ -1,3 +1,9 @@
+{
+
+    "productId" : 13860428,
+    "value" : "13.49",
+    "currencyCode" : "USD"
+}
 
 {
 
@@ -39,19 +45,12 @@
 }
 
 
-{
-
-    "productId" : 13860428,
-    "value" : "101",
-    "currencyCode" : "EUR"
-}
-
 
 {
 
     "productId" : 3,
     "value" : "202",
-    "currencyCode" : "GIG"
+    "currencyCode" : "EUR"
 }
 
 
