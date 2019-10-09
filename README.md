@@ -46,14 +46,14 @@ Execution Steps:
 
 
 2) Pricing Service Container:
-
-	a) goto the location ~ Pricing/src/Docker
-	b) docker build -t price:1.0 -t price:latest .
-	c) docker run -d -p 8080:8080 --name price --link mongodb price
+  a) build the project
+	b) goto the location ~ Pricing/src/Docker and copy the Pricing jar from build/libs/ to this location. (ex: cp ../../build/libs/Pricing-1.0.0.jar . )
+	c) docker build -t price:1.0 -t price:latest .
+	d) docker run -d -p 8080:8080 --name price --link mongodb price
 
 3) Retail Service Container:
-
-	 a) goto the location ~ RetailStore/src/Docker
+   a) build the project
+	 a) goto the location ~ RetailStore/src/Docker and copy the RetailStore jar from build/libs/ to this location. (ex: cp ../../build/libs/RetailStore-1.0.0.jar . )
 	 b) docker build -t retail:1.0 -t retail:latest .
 	 c) docker run -d -p 8081:8081 --name retail --link price  retail
 
